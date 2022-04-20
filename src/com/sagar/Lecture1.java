@@ -5,7 +5,7 @@ public class Lecture1 {
         System.out.println("Hello, World!");
     }
 }
-/*Task:
+/*Task 1 :
     Print:
         My name is 'Your-Name'
         2 + 3 = 5 (Here 5 can't be a string)
