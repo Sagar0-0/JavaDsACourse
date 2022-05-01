@@ -24,5 +24,6 @@ Task 2:
             short
             int
             long
-
+Solution:
+    By-
  */

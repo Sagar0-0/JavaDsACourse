@@ -51,4 +51,6 @@ Task 3:
         1. Take 2 'Integer' inputs using "Integer.parseInt()"
         2. Add them +
         3. Downcast them into 'byte' and print
+Solution:
+    By-
  */
