@@ -100,5 +100,8 @@ Task 8:
     4. if b is also 10 then print they are same
     5. if b is 20 then print b is greater than a
     6. if a is 20 then print a wins.
+
+Solution:
+-By
  */
 
