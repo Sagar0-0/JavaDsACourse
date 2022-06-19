@@ -12,17 +12,19 @@ public class Lecture13 {
 //            System.out.println();
 //        }
 
-        Scanner sc=new Scanner(System.in);
-        int numberLimit=sc.nextInt();
-        int tableUpto=sc.nextInt();
-        for(int number=1;number<=numberLimit;number++){
+//        Scanner sc=new Scanner(System.in);
+//        int numberLimit=sc.nextInt();
+//        int tableUpto=sc.nextInt();
+//        for(int number=1;number<=numberLimit;number++){
+//
+//            //print table of (number) from 1 - (tableUpto)
+//            for(int multiply=1;multiply<=tableUpto;multiply++){
+//                System.out.print(number*multiply + " ");
+//            }
+//            System.out.println();
+//        }
 
-            //print table of (number) from 1 - (tableUpto)
-            for(int multiply=1;multiply<=tableUpto;multiply++){
-                System.out.print(number*multiply + " ");
-            }
-            System.out.println();
-        }
+
 
     }
 }
@@ -32,4 +34,25 @@ Task 13:
 
 Solution:
 
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int gotPrimes=0;
+        int number=1;
+
+        while(gotPrimes<n){
+            if(number!=1){
+                boolean prime=true;
+                for(int i=2;i*i<=number;i++){
+                    if(number%i==0){
+                        prime=false;
+                        break;
+                    }
+                }
+                if(prime){
+                    gotPrimes++;
+                    System.out.print(number + " ");
+                }
+            }
+            number++;
+        }
  */
