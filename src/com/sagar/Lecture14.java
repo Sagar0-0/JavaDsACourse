@@ -35,17 +35,18 @@ public class Lecture14 {
 //        }
 
         //q4
-        for(int row=1;row<=n;row++){
+//        for(int row=1;row<=n;row++){
+//
+//            for(int spaces=1;spaces<=row-1;spaces++){
+//                System.out.print("  ");
+//            }
+//
+//            for(int star=1;star<=n-row+1;star++){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
 
-            for(int spaces=1;spaces<=row-1;spaces++){
-                System.out.print("  ");
-            }
-
-            for(int star=1;star<=n-row+1;star++){
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
 
 
     }
@@ -61,4 +62,15 @@ Task 14:
 
 Solution:
 
+        for(int row=1;row<=n;row++){
+            for(int spaces=1;spaces<=n-row;spaces++){
+                System.out.print(" ");
+            }
+
+            for(int star=1;star<=row;star++){
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
  */
