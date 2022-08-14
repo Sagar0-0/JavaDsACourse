@@ -12,9 +12,8 @@ public class Lecture19 {
 //        };
 
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter rows:");
+        System.out.println("Enter size:");
         int rows=sc.nextInt();
-        System.out.println("Enter cols: ");
         int cols=sc.nextInt();
 
         int[][] a=new int[rows][cols];
@@ -26,13 +25,13 @@ public class Lecture19 {
             }
         }
 
-        int[][]b=new int[rows][cols];
-        System.out.println("Enter "+ rows*cols +" values for b");
-        for(int row=0;row<b.length;row++){
-            for(int col=0;col<b[row].length;col++){
-                b[row][col]=sc.nextInt();
-            }
-        }
+//        int[][]b=new int[n][cols];
+//        System.out.println("Enter "+ n*n +" values for b");
+//        for(int row=0;row<b.length;row++){
+//            for(int col=0;col<b[row].length;col++){
+//                b[row][col]=sc.nextInt();
+//            }
+//        }
 
 
         //q1 convert 1d array into 2d array
@@ -87,26 +86,43 @@ public class Lecture19 {
 //        }
 
         //q3 - matrix multiplication
+//        int[][]ans=new int[rows][cols];
+//        for(int i=0;i<rows;i++){
+//            for(int j=0;j<cols;j++){
+//                for(int k=0;k<n;k++){
+//                    ans[i][j]+=a[i][k]*b[k][j];
+//                }
+//            }
+//        }
+//
+//        System.out.println("Result matrix:");
+//        for(int[]ar:ans){
+//            for(int i:ar){
+//                System.out.print(i+" ");
+//            }
+//            System.out.println();
+//        }
 
-        int[][] ans =new int[rows][cols];
-
-        //rows from a
-        for(int i=0;i<rows;i++){
-            // cols from a
-            for(int j=0;j<cols;j++){
-                //cols from b
-                for(int k=0;k<rows;k++){
-                    ans[i][j]+=(a[i][j]*b[k][i]);
-                }
-            }
-        }
-
-        for(int[]ar:ans){
-            for(int i:ar){
-                System.out.print(i+" ");
-            }
-            System.out.println();
-        }
+//        System.out.println("Enter k");
+//        int k=sc.nextInt();
+//        int ans=0;
+//
+//        //iterating over given matrix
+//        for(int x=0;x<=rows-k;x++){
+//            for(int y=0;y<=cols-k;y++){
+//
+//                //iterating over k.k matrix
+//                int curr=0;
+//                for(int i=x;i<x+k;i++) {
+//                    for (int j = y; j < y+k; j++) {
+//                        curr += a[i][j];
+//                    }
+//                }
+//
+//                ans=Math.max(ans,curr);
+//            }
+//        }
+//        System.out.println(ans);
 
     }
 }
@@ -118,10 +134,11 @@ Task 19:
 
     n=4
     k=2
-    1 0 1 0
-    1 0 1 1
-    1 1 0 1
-    0 0 0 0
+1 0 1 0
+1 0 1 1
+1 1 0 1
+0 0 0 0
 
-    3
+3
+
  */
