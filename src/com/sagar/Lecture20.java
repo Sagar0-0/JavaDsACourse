@@ -23,14 +23,14 @@ public class Lecture20 {
 //            boolean notEntered=true;
 //            for(int i=0;i<=n-2-iterationCount;i++){
 //                //if wrong order then swap
-//                if(arr[i]>arr[i+1]){
+//                if(arr[i]<arr[i+1]){
 //                    notEntered=false;
 //                    int temp=arr[i];
 //                    arr[i]=arr[i+1];
 //                    arr[i+1]=temp;
 //                }
 //            }
-//            System.out.print(iterationCount+ " ");
+////            System.out.print(iterationCount+ " ");
 //            if(notEntered){
 //                break;
 //            }
@@ -44,22 +44,22 @@ public class Lecture20 {
 
         //increasing order
         //O(n^2)
-        //selection sort - select the min and put in the 1st position of our range
+        //selection sort - select the max and put in the 1st position of our range
 
 //        for(int i=0;i<n;i++){
-//            int minimumValueInTheRange=Integer.MAX_VALUE;
-//            int indexOfMin=0;
+//            int maxValue=Integer.MIN_VALUE;
+//            int indexOfMax=0;
 //            //iterating in the range
 //            for(int j=i;j<=n-1;j++){
-//                if(arr[j]<minimumValueInTheRange){
-//                    minimumValueInTheRange=arr[j];
-//                    indexOfMin=j;
+//                if(arr[j]>maxValue){
+//                    maxValue=arr[j];
+//                    indexOfMax=j;
 //                }
 //            }
 //
 //            int temp=arr[i];
-//            arr[i]=minimumValueInTheRange;
-//            arr[indexOfMin]=temp;
+//            arr[i]=maxValue;
+//            arr[indexOfMax]=temp;
 //
 //        }
 //
@@ -72,7 +72,7 @@ public class Lecture20 {
 //            int temp = arr[i];
 //            int j = i - 1;
 //            for (; j >= 0; j--) {
-//                if (arr[j] > temp) {
+//                if (arr[j] < temp) {
 //                    arr[j + 1] = arr[j];
 //                } else {
 //                    break;
