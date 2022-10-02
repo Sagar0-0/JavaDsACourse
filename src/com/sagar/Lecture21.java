@@ -103,6 +103,22 @@ public class Lecture21 {
 //            }
 //        }
 //        if(!foundAns) System.out.println("NOT FOUND");
+
+        int[]arr=new int[]{1,1,1,2,2,2,3,3,4};
+        int target=2;
+        int ans=-1;
+        int l=0;
+        int h=arr.length-1;
+        while(l<=h){
+            int mid=(l+h)/2;
+            if(arr[mid]<=target){
+                if(arr[mid]==target)ans=mid;
+                l=mid+1;
+            }else{
+                h=mid-1;
+            }
+        }
+        System.out.println(ans);
     }
 }
 /*
@@ -113,5 +129,5 @@ Task 21:
 
     // 1 2 2 2 3 3 4
     //2
-    //index = 2
+    //index = 3
  */
