@@ -1,10 +1,10 @@
 package com.sagar;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Task22 {
     public static void main(String[] args) {
-        //1. Input a string
+        //1. Input sb string
         //2. Reverse and print it
         // "abc"
         // "cba"
