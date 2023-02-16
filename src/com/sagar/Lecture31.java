@@ -15,7 +15,7 @@ abstract class Shape{
     Shape(){
         System.out.println("Shape cons..");
     }
-    final int ans=0;
+    int ans=0;
     abstract void draw();
     void drawAgain(){
         System.out.println("Drawing again..");
