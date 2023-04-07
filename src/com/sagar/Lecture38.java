@@ -28,11 +28,11 @@ public class Lecture38 {
 //        ll.add(1);
 //        ll.add();
 
-        MyLinkedList myLinkedList=new MyLinkedList();
-        myLinkedList.add(1);
-        myLinkedList.add(2);
-        myLinkedList.add(3);
-        myLinkedList.add(4);
+        MyLinkedList<String> myLinkedList=new MyLinkedList<>();
+        myLinkedList.add("1");
+        myLinkedList.add("2");
+        myLinkedList.add("3");
+        myLinkedList.add("4");
         System.out.println(myLinkedList.isEmpty());
         for(int i=0;i<4;i++){
             System.out.println(myLinkedList.get(i));
@@ -40,39 +40,63 @@ public class Lecture38 {
 
     }
 
-    static class MyLinkedList{
+    static class MyLinkedList<T>{
         /*Task 38:
         1. Make this class Generics
         2. Create an add/remove method that takes 2 params(index,element)
          */
-        Node first;
-        Node last;
-        void add(Integer val){
-            Node newNode = new Node(val);
+        Node<T> first;
+        Node<T> last;
+        int size;
+        boolean add(int index, T val){
+
+            //temp.next
+            //temp.next.next
+            //temp.next=temp.next.next;
+
+            if(index>size)return false;
+            Node<T> newNode = new Node<>(val);
+            if(index==0){
+                Node<T> furtherLL = first;
+                first=newNode;
+                newNode.next = furtherLL;
+                return true;
+            }
+            Node<T> temp = first;
+            for(int i=0;i<index-1;i++){
+                temp=temp.next;
+            }
+            Node<T> furtherLL= temp.next;
+            temp.next = newNode;
+            newNode.next = furtherLL;
+            return true;
+        }
+        void add(T val){
+            Node<T> newNode = new Node<>(val);
             if(last==null){
                 first=newNode;
-                last=newNode;
             }else{
                 last.next=newNode;
-                last = newNode;
             }
+            last=newNode;
+            size++;
         }
-        Integer get(int index){
-            Node temp=first;
+        T get(int index){
+            Node<T> temp=first;
             for(int i=0;i<index;i++){
                 temp=temp.next;
             }
             return temp.val;
         }
         boolean isEmpty(){
-            return first==null;
+            return size==0;
         }
     }
 
-    static class Node{
-        Integer val;
-        Node next;
-        Node(Integer val){
+    static class Node<T>{
+        T val;
+        Node<T> next;
+        Node(T val){
             this.val=val;
         }
     }
