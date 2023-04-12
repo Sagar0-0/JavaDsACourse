@@ -49,3 +49,9 @@ public class Lecture39 {
 
     }
 }
+/*
+Task 39:
+    1. Design Stack and Queue using Array
+    2. LeetCode 622.
+    3. LeetCode 20.
+ */
